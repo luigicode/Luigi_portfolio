@@ -1,3 +1,27 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 1s ease-out; }
+  .menu-btn .btn-line {
+    font-family: "Courier New", Courier, monospace;
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    transition: all 1s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(500deg) translate(11px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      transform: translate(9000px);
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(405deg) translate(-12px); }
+
 * {
   box-sizing: border-box; }
 

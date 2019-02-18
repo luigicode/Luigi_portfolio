@@ -1,0 +1,39 @@
+// Menu button
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  @include easeOut;
+
+  .btn-line {
+    font-family: "Courier New", Courier, monospace;
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    @include easeOut;
+  }
+
+  //rotate menu btn into x
+  &.close {
+    transform: rotate(180deg);
+
+    .btn-line {
+      //line one rotate
+      &:nth-child(1) {
+        transform: rotate(500deg) translate(11px);
+      }
+      // line two hide/slide in
+      &:nth-child(2) {
+        transform: translate(9000px);
+        opacity: 0;
+      }
+      //line three rotate
+      &:nth-child(3) {
+        transform: rotate(405deg) translate(-12px);
+      }
+    }
+  }
+}
