@@ -75,7 +75,7 @@
 
     &.show {
       // Slide in from top
-      transform: translate3d(0, 0, 0);
+      @include ogTranslate;
     }
   }
 
@@ -88,7 +88,7 @@
     &.show {
       // Slide in from bottom
 
-      transform: translate3d(0, 0, 0);
+      @include ogTranslate;
     }
 
     .portrait {
@@ -106,7 +106,7 @@
 
     &.show {
       // Slide in from right
-      transform: translate3d(0, 0, 0);
+      @include ogTranslate;
     }
 
     &.current > a {
