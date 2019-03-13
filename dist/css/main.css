@@ -230,8 +230,8 @@ main {
     width: 100%;
     border: 3px #fff solid; }
     .projects img:hover {
-      transform: scale(1.01);
-      margin: 0.9rem;
+      transform: scale(1.02);
+      margin: 0.2rem;
       opacity: 0.5;
       border-color: #e0df4b;
       transition: all 1s ease-out; }
