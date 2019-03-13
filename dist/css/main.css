@@ -58,6 +58,8 @@
       width: 250px;
       height: 250px;
       background: url("../img/portrait.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
       border-radius: 50%;
       border: solid 3px #e0df4b; }
   .menu .nav-item {
@@ -131,16 +133,36 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(0, 10, 86, 0.5); }
+    background: #000a56; }
 
 a {
   color: #dff;
   text-decoration: none; }
 
-header {
+.menu-btn {
+  top: 1.8rem; }
+
+.border-header {
+  background: #000633;
+  padding-top: 9.5vh;
   position: fixed;
   z-index: 2;
   width: 100%; }
+  .border-header header {
+    background: none;
+    padding: none;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    opacity: none; }
+  .border-header .heading {
+    color: #e0df4b;
+    font-family: cursive;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 30px;
+    top: 5px;
+    opacity: none; }
 
 .text-secondary {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -165,6 +187,15 @@ main {
     overflow: hidden; }
     main #home h1 {
       margin-top: 20vh; }
+  main .home-imgs {
+    position: fixed;
+    display: grid;
+    padding-top: 15px;
+    grid-gap: 0.7rem; }
+    main .home-imgs img {
+      width: 100%;
+      height: 90%;
+      border: 3px #000633 solid; }
 
 .about-info {
   display: grid;
@@ -200,11 +231,29 @@ main {
     border: 3px #fff solid; }
     .projects img:hover {
       transform: scale(1.01);
-      margin: 4px;
-      size: 40px;
+      margin: 0.9rem;
       opacity: 0.5;
       border-color: #e0df4b;
       transition: all 1s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 0.5rem; }
+  .boxes div {
+    font-size: 1.2rem;
+    border: 2.5px white solid;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 3rem;
+    transition: all 1s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #e0df4b;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -231,14 +280,29 @@ main {
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
+  .home-imgs {
+    grid-template-columns: repeat(4, 1fr); }
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
+  .heading {
+    margin: 5px;
+    padding-top: 10px;
+    font-size: 1.5rem; }
+  .home-imgs {
+    grid-template-columns: repeat(3, 1fr); }
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
+  .border-header {
+    padding-top: 5vh; }
+    .border-header header {
+      top: 3px; }
+    .border-header .heading {
+      padding-top: 0px;
+      font-size: 2rem; }
   main {
     align-items: center;
     text-align: center; }
@@ -264,6 +328,8 @@ main {
       background: url("../img/portrait_small.jpg");
       height: 150px;
       width: 150px; }
+  .home-imgs {
+    grid-template-columns: repeat(2, 1fr); }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }

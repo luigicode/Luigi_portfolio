@@ -1,5 +1,10 @@
 //Widescreens
 @include mediaF {
+  //home
+  .home-imgs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  //about
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -7,6 +12,18 @@
 
 //Desktops
 @include mediaLg {
+  .heading {
+    margin: 5px;
+    padding-top: 10px;
+    font-size: 1.5rem;
+  }
+  //home
+  .home-imgs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  //about
+
+  //work
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -14,6 +31,18 @@
 
 //Medium Screened Devices
 @include mediaMd {
+  .border-header {
+    padding-top: 5vh;
+
+    header {
+      top: 3px;
+    }
+
+    .heading {
+      padding-top: 0px;
+      font-size: 2rem;
+    }
+  }
   main {
     align-items: center;
     text-align: center;
@@ -50,6 +79,11 @@
       width: 150px;
     }
   }
+  //home
+  .home-imgs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   // about
   .about-info {
     grid-template-areas:
