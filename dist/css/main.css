@@ -62,6 +62,24 @@
       background-size: cover;
       border-radius: 50%;
       border: solid 3px #e0df4b; }
+      .menu-branding .portrait:hover {
+        opacity: 1;
+        box-shadow: 9px 9px 30px black;
+        transform: scale(1.01);
+        transition: all 1s ease-out; }
+      .menu-branding .portrait .name-tag {
+        opacity: 0;
+        padding: 15px;
+        color: black;
+        margin-top: 13rem;
+        text-align: center;
+        border-radius: 15%; }
+        .menu-branding .portrait .name-tag:hover {
+          opacity: 1;
+          background: #e0df4b;
+          box-shadow: 9px 9px 30px black;
+          color: black;
+          transition: all 1s ease-out; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 1s ease-out; }
@@ -249,7 +267,7 @@ main {
     margin-bottom: 3rem;
     transition: all 1s ease-out; }
     .boxes div:hover {
-      padding: 0.5rem 1.5rem;
+      padding: 0.7rem 1.7rem;
       background: #e0df4b;
       color: #000; }
       .boxes div:hover span {
@@ -262,7 +280,8 @@ main {
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
     background: #00052b;
-    color: #dfdd42; }
+    color: #dfdd42;
+    transition: all 1s ease-out; }
 
 .btn-dark {
   background: black;

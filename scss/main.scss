@@ -193,7 +193,7 @@ main {
     @include easeOut;
 
     &:hover {
-      padding: 0.5rem 1.5rem;
+      padding: 0.7rem 1.7rem;
       background: $secondary-color;
       color: set-text-color($secondary-color);
       span {
@@ -213,6 +213,7 @@ main {
   &:hover {
     background: darken($primary-color, 6.5);
     color: darken($secondary-color, 2);
+    @include easeOut;
   }
 }
 

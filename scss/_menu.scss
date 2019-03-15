@@ -99,9 +99,31 @@
       //background-position: 40px 40px;
       border-radius: 50%;
       border: solid 3px $secondary-color;
+
+      &:hover {
+        opacity: 1;
+        box-shadow: 9px 9px 30px black;
+        transform: scale(1.01);
+        @include easeOut;
+      }
+
+      .name-tag {
+        opacity: 0;
+        padding: 15px;
+        color: black;
+        margin-top: 13rem;
+        text-align: center;
+        border-radius: 15%;
+        &:hover {
+          opacity: 1;
+          background: $secondary-color;
+          box-shadow: 9px 9px 30px black;
+          color: black;
+          @include easeOut;
+        }
+      }
     }
   }
-
   .nav-item {
     transform: translate3d(600px, 0, 0);
     @include easeOut;
