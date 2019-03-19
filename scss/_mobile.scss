@@ -18,8 +18,10 @@
     font-size: 1.5rem;
   }
   //home
-  .home-imgs {
-    grid-template-columns: repeat(3, 1fr);
+  body {
+    .home-imgs {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
   //about
 
@@ -41,12 +43,6 @@
     .heading {
       padding-top: 0px;
       font-size: 2rem;
-    }
-  }
-  body {
-    .home-imgs {
-      width: 20rem;
-      height: 20rem;
     }
   }
 

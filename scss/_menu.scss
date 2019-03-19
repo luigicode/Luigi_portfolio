@@ -107,20 +107,15 @@
         @include easeOut;
       }
 
-      .name-tag {
-        opacity: 0;
-        padding: 15px;
-        color: black;
-        margin-top: 13rem;
+      &:hover .name-tag {
+        opacity: 1;
+        background: $secondary-color;
         text-align: center;
+        padding: 15px;
+        box-shadow: 9px 9px 30px black;
+        color: black;
         border-radius: 15%;
-        &:hover {
-          opacity: 1;
-          background: $secondary-color;
-          box-shadow: 9px 9px 30px black;
-          color: black;
-          @include easeOut;
-        }
+        @include easeOut;
       }
     }
   }
