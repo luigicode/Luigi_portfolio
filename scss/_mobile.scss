@@ -1,10 +1,16 @@
 //Widescreens
 @include mediaF {
   //home
+
   .home-imgs {
     grid-template-columns: repeat(4, 1fr);
   }
   //about
+  .heading {
+    margin: 2.5px;
+    padding-top: 5px;
+    font-size: 1.5rem;
+  }
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -20,7 +26,7 @@
   //home
   body {
     .home-imgs {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
   //about
@@ -66,6 +72,7 @@
       @include ogTranslate;
     }
   }
+
   .menu-nav {
     height: 70vh;
     transform: translate3d(-100%, 0, 0);
@@ -83,9 +90,6 @@
     }
   }
   //home
-  .home-imgs {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
   // about
   .about-info {
@@ -111,6 +115,17 @@
     margin-top: 10vh;
   }
 
+  .menu-nav {
+    height: 100vh;
+  }
+
+  .menu-branding {
+    height: 0vh;
+  }
+
+  .portrait {
+    opacity: 0;
+  }
   .home-imgs {
     grid-template-columns: 1fr;
   }

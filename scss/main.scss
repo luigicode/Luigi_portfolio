@@ -15,6 +15,7 @@ body {
 }
 
 // headings
+
 h1,
 h2,
 h3 {
@@ -103,12 +104,22 @@ main {
 .home-imgs {
   display: grid;
   padding-top: 15px;
-  grid-gap: 0.7rem;
+  grid-gap: 2.7rem;
 
   img {
-    width: 14rem;
-    height: 10rem;
+    display: grid;
+    width: 18rem;
+    height: 14rem;
     border: 3px darken($primary-color, 5) solid;
+
+    &:hover {
+      padding: inherit;
+      margin: inherit;
+      border: 3px $secondary-color solid;
+      transform: scale(1.05);
+      @include easeOut;
+      @include cartoonShadow;
+    }
   }
 }
 
@@ -164,8 +175,6 @@ main {
     border: 3px #fff solid;
 
     &:hover {
-      transform: scale(1.02);
-      margin: 0.2rem;
       //padding: 1.2rem 1.2rem;
 
       opacity: 0.5;
@@ -194,8 +203,10 @@ main {
       padding: 0.7rem 1.7rem;
       background: $secondary-color;
       color: set-text-color($secondary-color);
+      border: $primary-color;
+      @include cartoonShadow;
       span {
-        color: set-text-color($secondary-color);
+        color: $primary-color;
       }
     }
   }

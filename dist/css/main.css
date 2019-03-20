@@ -64,15 +64,18 @@
       border: solid 3px #e0df4b; }
       .menu-branding .portrait:hover {
         opacity: 1;
-        box-shadow: 9px 9px 30px black;
+        box-shadow: 5px 5px #000;
         transform: scale(1.01);
         transition: all 1s ease-out; }
+      .menu-branding .portrait .name-tag {
+        opacity: 0;
+        color: #fff; }
       .menu-branding .portrait:hover .name-tag {
         opacity: 1;
         background: #e0df4b;
         text-align: center;
         padding: 15px;
-        box-shadow: 9px 9px 30px black;
+        box-shadow: 3px 3px 10px #000;
         color: black;
         border-radius: 15%;
         transition: all 1s ease-out; }
@@ -205,11 +208,19 @@ main {
 .home-imgs {
   display: grid;
   padding-top: 15px;
-  grid-gap: 0.7rem; }
+  grid-gap: 2.7rem; }
   .home-imgs img {
-    width: 14rem;
-    height: 10rem;
+    display: grid;
+    width: 18rem;
+    height: 14rem;
     border: 3px #000633 solid; }
+    .home-imgs img:hover {
+      padding: inherit;
+      margin: inherit;
+      border: 3px #e0df4b solid;
+      transform: scale(1.05);
+      transition: all 1s ease-out;
+      box-shadow: 5px 5px #000; }
 
 .about-info {
   display: grid;
@@ -244,8 +255,6 @@ main {
     width: 100%;
     border: 3px #fff solid; }
     .projects img:hover {
-      transform: scale(1.02);
-      margin: 0.2rem;
       opacity: 0.5;
       border-color: #e0df4b;
       transition: all 1s ease-out; }
@@ -265,9 +274,11 @@ main {
     .boxes div:hover {
       padding: 0.7rem 1.7rem;
       background: #e0df4b;
-      color: #000; }
+      color: #000;
+      border: #00094c;
+      box-shadow: 5px 5px #000; }
       .boxes div:hover span {
-        color: #000; }
+        color: #00094c; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -297,6 +308,10 @@ main {
 @media screen and (min-width: 1171px) {
   .home-imgs {
     grid-template-columns: repeat(4, 1fr); }
+  .heading {
+    margin: 2.5px;
+    padding-top: 5px;
+    font-size: 1.5rem; }
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
 
@@ -306,7 +321,7 @@ main {
     padding-top: 10px;
     font-size: 1.5rem; }
   body .home-imgs {
-    grid-template-columns: repeat(3, 1fr); }
+    grid-template-columns: repeat(2, 1fr); }
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
 
@@ -343,8 +358,6 @@ main {
       background: url("../img/portrait_small.jpg");
       height: 150px;
       width: 150px; }
-  .home-imgs {
-    grid-template-columns: repeat(2, 1fr); }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
@@ -354,6 +367,12 @@ main {
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh; }
+  .menu-nav {
+    height: 100vh; }
+  .menu-branding {
+    height: 0vh; }
+  .portrait {
+    opacity: 0; }
   .home-imgs {
     grid-template-columns: 1fr; }
   .projects {

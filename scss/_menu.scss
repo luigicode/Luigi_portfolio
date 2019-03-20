@@ -102,9 +102,14 @@
 
       &:hover {
         opacity: 1;
-        box-shadow: 9px 9px 30px black;
+        @include cartoonShadow;
         transform: scale(1.01);
         @include easeOut;
+      }
+
+      .name-tag {
+        opacity: 0;
+        color: #fff;
       }
 
       &:hover .name-tag {
@@ -112,7 +117,7 @@
         background: $secondary-color;
         text-align: center;
         padding: 15px;
-        box-shadow: 9px 9px 30px black;
+        box-shadow: 3px 3px 10px #000;
         color: black;
         border-radius: 15%;
         @include easeOut;
